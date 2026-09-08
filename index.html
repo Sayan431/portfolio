@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sayan — Full-stack &amp; AI Systems</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <canvas id="particle-canvas"></canvas>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+  <div class="grain"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="mark">
+        <span class="mark-dot" aria-hidden="true"></span>
+        <span class="mark-text">SAYAN</span>
+      </div>
+      <nav class="site-nav">
+        <a href="#log">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <h1 class="hero-title">I build the systems<br>underneath the product.</h1>
+        <p class="hero-sub" id="hero-sub"
+          data-text="Python backends, React frontends, and the AI pipelines that connect them. Five shipped projects below — booking platforms, lead-gen engines, and agents that do the work no one wants to do by hand.">
+        </p>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <div class="hero-meta-icon">🚀</div>
+            <div class="hero-meta-text">
+              <span class="hero-meta-num">05</span>
+              <span class="hero-meta-label">deployed projects</span>
+            </div>
+          </div>
+          <div class="hero-meta-item hero-meta-stack">
+            <div class="hero-stack-cloud">
+              <span>FastAPI</span>
+              <span>Python</span>
+              <span>React</span>
+              <span>PostgreSQL</span>
+              <span>Claude</span>
+              <span>Llama3</span>
+              <span>Vite</span>
+              <span>Render</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="log">
+      <div class="projects-header reveal">
+        <h2>Project Log</h2>
+        <p>Five shipped products.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- 01 Zuvo Intelligence -->
+        <article class="proj-card reveal delay-100" data-color="indigo">
+          <div class="proj-img-wrap">
+            <img src="images/project_zuvo.jpg" alt="Zuvo Intelligence dashboard" class="proj-img" loading="lazy" />
+            <div class="proj-img-overlay"></div>
+            <span class="proj-num">01</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <span class="proj-icon">🤖</span>
+              <h3 class="proj-title">Zuvo Intelligence</h3>
+            </div>
+            <p class="proj-tag">supply chain + amazon ads agent</p>
+            <p class="proj-desc">An AI agent covering supply chain intelligence and Amazon Ads management across Vendor and Seller Central, spanning UK, US, and EU marketplaces. Built as Claude Skills — one for inventory forecasting, one for ads management.</p>
+            <ul class="proj-stack">
+              <li>Claude Skills</li>
+              <li>Amazon Ads API</li>
+              <li>Forecasting</li>
+            </ul>
+            <a class="proj-link" href="https://ronny-front-end.vercel.app/" target="_blank" rel="noopener">
+              View deployment <span class="proj-arrow">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 02 VE Lead Generator -->
+        <article class="proj-card reveal delay-200" data-color="violet">
+          <div class="proj-img-wrap">
+            <img src="images/project_leadgen.jpg" alt="VE Lead Generator dashboard" class="proj-img" loading="lazy" />
+            <div class="proj-img-overlay"></div>
+            <span class="proj-num">02</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <span class="proj-icon">📡</span>
+              <h3 class="proj-title">VE Lead Generator</h3>
+            </div>
+            <p class="proj-tag">B2B lead generation dashboard</p>
+            <p class="proj-desc">Scrapes job postings across LinkedIn, Indeed, Remotive, Wellfound and Google Jobs to surface outsourcing opportunities. Enriched with GPT-4o-mini and scored on a 13-point system before export to Sheets.</p>
+            <ul class="proj-stack">
+              <li>Apify</li>
+              <li>RapidAPI</li>
+              <li>GPT-4o-mini</li>
+            </ul>
+            <a class="proj-link" href="https://lead-gen-v01-frontend.onrender.com/" target="_blank" rel="noopener">
+              View deployment <span class="proj-arrow">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 03 Presales AI Agent -->
+        <article class="proj-card reveal delay-300" data-color="amber">
+          <div class="proj-img-wrap">
+            <img src="images/project_presales.jpg" alt="Presales AI Agent UI" class="proj-img" loading="lazy" />
+            <div class="proj-img-overlay"></div>
+            <span class="proj-num">03</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <span class="proj-icon">⚡</span>
+              <h3 class="proj-title">Presales AI Agent</h3>
+            </div>
+            <p class="proj-tag">in-house client &amp; developer matching</p>
+            <p class="proj-desc">An in-house tool that shortens the distance between a new client and a working proposal. Connects incoming clients with the right developers and auto-generates proposals, cutting out manual back-and-forth.</p>
+            <ul class="proj-stack">
+              <li>AI Agent</li>
+              <li>Proposal generation</li>
+              <li>Internal tooling</li>
+            </ul>
+            <a class="proj-link" href="https://presalesaiagent.vestaging.in/" target="_blank" rel="noopener">
+              View deployment <span class="proj-arrow">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 04 KosherStay -->
+        <article class="proj-card reveal delay-100" data-color="rose">
+          <div class="proj-img-wrap">
+            <img src="images/project_kosherstay.jpg" alt="KosherStay booking platform" class="proj-img" loading="lazy" />
+            <div class="proj-img-overlay"></div>
+            <span class="proj-num">04</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <span class="proj-icon">🏨</span>
+              <h3 class="proj-title">KosherStay</h3>
+            </div>
+            <p class="proj-tag">full-stack hotel booking platform</p>
+            <p class="proj-desc">A booking platform with Shabbat-aware scheduling and kosher-specific amenity flags. FastAPI + SQLAlchemy backend with JWT-based role access across super admin, hotel admin, and customer tiers.</p>
+            <ul class="proj-stack">
+              <li>FastAPI</li>
+              <li>React / Vite</li>
+              <li>PostgreSQL</li>
+              <li>JWT RBAC</li>
+            </ul>
+            <a class="proj-link" href="https://kosherstay2.vercel.app/" target="_blank" rel="noopener">
+              View deployment <span class="proj-arrow">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 05 Travel Content Automation -->
+        <article class="proj-card reveal delay-200" data-color="cyan">
+          <div class="proj-img-wrap">
+            <img src="images/project_travel.jpg" alt="Travel Content Automation pipeline" class="proj-img" loading="lazy" />
+            <div class="proj-img-overlay"></div>
+            <span class="proj-num">05</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <span class="proj-icon">✈️</span>
+              <h3 class="proj-title">Travel Content Agent</h3>
+            </div>
+            <p class="proj-tag">RSS → AI content → social posting</p>
+            <p class="proj-desc">A full pipeline that collects travel RSS feeds, routes them through human review, generates content with Groq's llama3-70b, and posts it out — tuned for Amsterdam and Paris. Jobs run on APScheduler.</p>
+            <ul class="proj-stack">
+              <li>FastAPI</li>
+              <li>React 18</li>
+              <li>MySQL</li>
+              <li>Groq llama3-70b</li>
+            </ul>
+            <a class="proj-link" href="https://travel-content-automation-agent-1.onrender.com/" target="_blank" rel="noopener">
+              View deployment <span class="proj-arrow">↗</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="stack" id="stack">
+      <div class="stack-inner">
+        <h2 class="reveal">What it's built with</h2>
+        <div class="stack-grid">
+          <div class="stack-col reveal delay-100">
+            <h3>Backend</h3>
+            <p>FastAPI, SQLAlchemy, PostgreSQL, MySQL, APScheduler</p>
+          </div>
+          <div class="stack-col reveal delay-200">
+            <h3>Frontend</h3>
+            <p>React, Vite, HTML / CSS / JS</p>
+          </div>
+          <div class="stack-col reveal delay-300">
+            <h3>AI &amp; agents</h3>
+            <p>Claude Skills, Groq llama3-70b, GPT-4o-mini</p>
+          </div>
+          <div class="stack-col reveal delay-400">
+            <h3>Infra</h3>
+            <p>Vercel, Render, Neon, Cloudinary</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner reveal">
+      <p class="footer-line">Building full-stack products and the AI systems behind them.</p>
+      <a class="footer-mail" href="mailto:sayanchatterjee1@virtualemployee.com">sayanchatterjee1@virtualemployee.com</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
