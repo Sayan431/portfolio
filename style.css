@@ -255,6 +255,40 @@ a {
   position: relative;
 }
 
+/* ---------- big greeting ---------- */
+
+.hero-greeting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--sans);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 0 0 28px;
+  letter-spacing: 0.01em;
+}
+
+.hero-greeting-wave {
+  display: inline-block;
+  font-size: 1.3rem;
+  animation: wave 2.4s ease-in-out 1s infinite;
+  transform-origin: 70% 80%;
+}
+
+@keyframes wave {
+  0%, 60%, 100% { transform: rotate(0deg); }
+  10%            { transform: rotate(18deg); }
+  20%            { transform: rotate(-10deg); }
+  30%            { transform: rotate(16deg); }
+  40%            { transform: rotate(-6deg); }
+  50%            { transform: rotate(12deg); }
+}
+
+.hero-greeting-name {
+  color: var(--accent-primary);
+}
+
 .hero-eyebrow {
   display: inline-flex;
   align-items: center;
