@@ -144,10 +144,21 @@ a {
 }
 
 @keyframes float {
-  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
-  33% { transform: translate(15vw, 10vh) rotate(120deg) scale(1.2); }
-  66% { transform: translate(-10vw, 20vh) rotate(240deg) scale(0.85); }
-  100% { transform: translate(5vw, -5vh) rotate(360deg) scale(1.05); }
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+
+  33% {
+    transform: translate(15vw, 10vh) rotate(120deg) scale(1.2);
+  }
+
+  66% {
+    transform: translate(-10vw, 20vh) rotate(240deg) scale(0.85);
+  }
+
+  100% {
+    transform: translate(5vw, -5vh) rotate(360deg) scale(1.05);
+  }
 }
 
 /* ---------- header ---------- */
@@ -245,8 +256,15 @@ a {
 }
 
 @keyframes heroPulse {
-  0% { opacity: 0.6; transform: scale(0.98); }
-  100% { opacity: 1; transform: scale(1.05); }
+  0% {
+    opacity: 0.6;
+    transform: scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
 }
 
 .hero-inner {
@@ -277,12 +295,32 @@ a {
 }
 
 @keyframes wave {
-  0%, 60%, 100% { transform: rotate(0deg); }
-  10%            { transform: rotate(18deg); }
-  20%            { transform: rotate(-10deg); }
-  30%            { transform: rotate(16deg); }
-  40%            { transform: rotate(-6deg); }
-  50%            { transform: rotate(12deg); }
+
+  0%,
+  60%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(18deg);
+  }
+
+  20% {
+    transform: rotate(-10deg);
+  }
+
+  30% {
+    transform: rotate(16deg);
+  }
+
+  40% {
+    transform: rotate(-6deg);
+  }
+
+  50% {
+    transform: rotate(12deg);
+  }
 }
 
 .hero-greeting-name {
@@ -316,12 +354,14 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
   /* The entrance animation fadeUp is added by JS/HTML class now, so we can add shine here */
 }
 
 @keyframes shine {
-  to { background-position: 200% center; }
+  to {
+    background-position: 200% center;
+  }
 }
 
 .hero-sub {
@@ -345,7 +385,8 @@ a {
   align-items: center;
   gap: 18px;
   padding: 16px 24px;
-  border: 1px solid var(--border); box-shadow: var(--glass-shadow);
+  border: 1px solid var(--border);
+  box-shadow: var(--glass-shadow);
   border-radius: 16px;
   background: var(--bg-card);
   min-width: 140px;
@@ -414,22 +455,25 @@ a {
 .hero-stack-cloud span:nth-child(4n+1) {
   color: var(--accent-primary);
   background: var(--cyan-glow);
-  border: 1px solid rgba(77,217,224,0.25);
+  border: 1px solid rgba(77, 217, 224, 0.25);
 }
+
 .hero-stack-cloud span:nth-child(4n+2) {
   color: var(--violet);
   background: var(--violet-glow);
-  border: 1px solid rgba(167,139,250,0.25);
+  border: 1px solid rgba(167, 139, 250, 0.25);
 }
+
 .hero-stack-cloud span:nth-child(4n+3) {
   color: var(--amber);
   background: var(--amber-glow);
-  border: 1px solid rgba(240,168,66,0.25);
+  border: 1px solid rgba(240, 168, 66, 0.25);
 }
+
 .hero-stack-cloud span:nth-child(4n) {
   color: var(--green);
   background: var(--green-glow);
-  border: 1px solid rgba(52,211,153,0.25);
+  border: 1px solid rgba(52, 211, 153, 0.25);
 }
 
 /* ---------- projects grid ---------- */
@@ -481,15 +525,15 @@ a {
 }
 
 .proj-card {
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1),
-              box-shadow 0.35s cubic-bezier(0.22,1,0.36,1),
-              border-color 0.35s ease;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease;
   will-change: transform;
 }
 
@@ -498,18 +542,51 @@ a {
 }
 
 /* per-color accent glow on hover */
-.proj-card[data-color="indigo"]:hover  { border-color: rgba(99,102,241,0.5);  box-shadow: 0 20px 60px rgba(99,102,241,0.18); }
-.proj-card[data-color="violet"]:hover  { border-color: rgba(167,139,250,0.5); box-shadow: 0 20px 60px rgba(167,139,250,0.18); }
-.proj-card[data-color="amber"]:hover   { border-color: rgba(240,168,66,0.5);  box-shadow: 0 20px 60px rgba(240,168,66,0.15); }
-.proj-card[data-color="rose"]:hover    { border-color: rgba(251,113,133,0.5); box-shadow: 0 20px 60px rgba(251,113,133,0.15); }
-.proj-card[data-color="cyan"]:hover    { border-color: rgba(77,217,224,0.5);  box-shadow: 0 20px 60px rgba(77,217,224,0.15); }
+.proj-card[data-color="indigo"]:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.18);
+}
+
+.proj-card[data-color="violet"]:hover {
+  border-color: rgba(167, 139, 250, 0.5);
+  box-shadow: 0 20px 60px rgba(167, 139, 250, 0.18);
+}
+
+.proj-card[data-color="amber"]:hover {
+  border-color: rgba(240, 168, 66, 0.5);
+  box-shadow: 0 20px 60px rgba(240, 168, 66, 0.15);
+}
+
+.proj-card[data-color="rose"]:hover {
+  border-color: rgba(251, 113, 133, 0.5);
+  box-shadow: 0 20px 60px rgba(251, 113, 133, 0.15);
+}
+
+.proj-card[data-color="cyan"]:hover {
+  border-color: rgba(77, 217, 224, 0.5);
+  box-shadow: 0 20px 60px rgba(77, 217, 224, 0.15);
+}
 
 /* top color bar */
-.proj-card[data-color="indigo"] { border-top: 2px solid rgba(99,102,241,0.6); }
-.proj-card[data-color="violet"] { border-top: 2px solid rgba(167,139,250,0.6); }
-.proj-card[data-color="amber"]  { border-top: 2px solid rgba(240,168,66,0.6); }
-.proj-card[data-color="rose"]   { border-top: 2px solid rgba(251,113,133,0.6); }
-.proj-card[data-color="cyan"]   { border-top: 2px solid rgba(77,217,224,0.6); }
+.proj-card[data-color="indigo"] {
+  border-top: 2px solid rgba(99, 102, 241, 0.6);
+}
+
+.proj-card[data-color="violet"] {
+  border-top: 2px solid rgba(167, 139, 250, 0.6);
+}
+
+.proj-card[data-color="amber"] {
+  border-top: 2px solid rgba(240, 168, 66, 0.6);
+}
+
+.proj-card[data-color="rose"] {
+  border-top: 2px solid rgba(251, 113, 133, 0.6);
+}
+
+.proj-card[data-color="cyan"] {
+  border-top: 2px solid rgba(77, 217, 224, 0.6);
+}
 
 /* image */
 .proj-img-wrap {
@@ -524,7 +601,7 @@ a {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1), filter 0.4s ease;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s ease;
   filter: brightness(0.85) saturate(1.1);
 }
 
@@ -536,7 +613,7 @@ a {
 .proj-img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 40%, rgba(8,12,20,0.92) 100%);
+  background: linear-gradient(to bottom, transparent 40%, rgba(8, 12, 20, 0.92) 100%);
   pointer-events: none;
 }
 
@@ -547,12 +624,12 @@ a {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.7);
-  background: rgba(0,0,0,0.45);
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(8px);
   padding: 3px 10px;
   border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* body */
@@ -614,8 +691,8 @@ a {
   padding: 3px 10px;
   border-radius: 12px;
   font-weight: 500;
-  background: rgba(129,140,248,0.1);
-  border: 1px solid rgba(129,140,248,0.2);
+  background: rgba(129, 140, 248, 0.1);
+  border: 1px solid rgba(129, 140, 248, 0.2);
   color: #a5b4fc;
 }
 
@@ -637,8 +714,8 @@ a {
 
 .proj-link:hover {
   color: var(--text-primary);
-  border-color: rgba(129,140,248,0.5);
-  background: rgba(129,140,248,0.08);
+  border-color: rgba(129, 140, 248, 0.5);
+  background: rgba(129, 140, 248, 0.08);
 }
 
 .proj-arrow {
@@ -964,18 +1041,31 @@ a {
 }
 
 /* Staggered delay for list items or flex children */
-.reveal.delay-100 { transition-delay: 100ms; }
-.reveal.delay-200 { transition-delay: 200ms; }
-.reveal.delay-300 { transition-delay: 300ms; }
-.reveal.delay-400 { transition-delay: 400ms; }
+.reveal.delay-100 {
+  transition-delay: 100ms;
+}
+
+.reveal.delay-200 {
+  transition-delay: 200ms;
+}
+
+.reveal.delay-300 {
+  transition-delay: 300ms;
+}
+
+.reveal.delay-400 {
+  transition-delay: 400ms;
+}
 
 /* Hero Entrance Animations */
 .hero-title {
   animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) both, shine 8s linear infinite;
 }
+
 .hero-sub {
   animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 150ms both;
 }
+
 .hero-meta {
   animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 300ms both;
 }
@@ -985,6 +1075,7 @@ a {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1214,6 +1305,13 @@ a {
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
