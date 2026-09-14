@@ -445,12 +445,14 @@ a {
 .tv-planet {
   position: absolute;
   width: 44px; height: 44px;
+  margin: -22px 0 0 -22px; /* Center on top/left coords without using transform */
   border-radius: 50%;
   background: rgba(15, 20, 40, 0.9);
   border: 1px solid rgba(129, 140, 248, 0.3);
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 4px 16px rgba(0,0,0,0.4);
   transition: transform 0.3s, box-shadow 0.3s;
+  will-change: transform;
 }
 .tv-planet:hover {
   transform: scale(1.25) !important;
@@ -463,26 +465,27 @@ a {
 .tv-svg-icon { stroke: #818cf8; }
 
 /* Position 4 planets evenly on orbit 1 (0°, 90°, 180°, 270°) */
-.tv-orbit-1 .tv-planet:nth-child(1) { top: -22px;  left: 50%;   transform: translateX(-50%); }
-.tv-orbit-1 .tv-planet:nth-child(2) { right: -22px; top: 50%;   transform: translateY(-50%); }
-.tv-orbit-1 .tv-planet:nth-child(3) { bottom: -22px; left: 50%; transform: translateX(-50%); }
-.tv-orbit-1 .tv-planet:nth-child(4) { left: -22px;  top: 50%;   transform: translateY(-50%); }
+.tv-orbit-1 .tv-planet:nth-child(1) { top: 0%;   left: 50%; }
+.tv-orbit-1 .tv-planet:nth-child(2) { top: 50%;  left: 100%; }
+.tv-orbit-1 .tv-planet:nth-child(3) { top: 100%; left: 50%; }
+.tv-orbit-1 .tv-planet:nth-child(4) { top: 50%;  left: 0%; }
 
 /* Position 5 planets evenly on orbit 2 (0°, 72°, 144°, 216°, 288°) */
-.tv-orbit-2 .tv-planet:nth-child(1) { top: -22px;  left: 50%; transform: translateX(-50%); }
-.tv-orbit-2 .tv-planet:nth-child(2) { top: 9%;    right: 5%;  }
-.tv-orbit-2 .tv-planet:nth-child(3) { bottom: 9%; right: 5%;  }
-.tv-orbit-2 .tv-planet:nth-child(4) { bottom: 9%; left: 5%;   }
-.tv-orbit-2 .tv-planet:nth-child(5) { top: 9%;    left: 5%;   }
+.tv-orbit-2 .tv-planet:nth-child(1) { top: 0%;      left: 50%; }
+.tv-orbit-2 .tv-planet:nth-child(2) { top: 34.5%;   left: 97.5%; }
+.tv-orbit-2 .tv-planet:nth-child(3) { top: 90.5%;   left: 79.4%; }
+.tv-orbit-2 .tv-planet:nth-child(4) { top: 90.5%;   left: 20.6%; }
+.tv-orbit-2 .tv-planet:nth-child(5) { top: 34.5%;   left: 2.5%; }
 
 /* Counter-rotate planets so icons stay upright */
-.tv-orbit-1 { animation: tvOrbit 14s linear infinite; }
+.tv-orbit-1 { animation: tvOrbit 14s linear infinite; will-change: transform; }
 .tv-orbit-1 .tv-planet { animation: tvOrbitReverse 14s linear infinite; }
-.tv-orbit-2 { animation: tvOrbit 24s linear infinite reverse; }
+.tv-orbit-2 { animation: tvOrbit 24s linear infinite reverse; will-change: transform; }
 .tv-orbit-2 .tv-planet { animation: tvOrbitReverse 24s linear infinite reverse; }
 
 @keyframes tvOrbitReverse {
-  to { transform: translateX(-50%) rotate(-360deg); }
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
 }
 
 /* Third center ring */
