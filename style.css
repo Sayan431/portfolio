@@ -2625,6 +2625,16 @@ a {
   background: var(--cyan-glow);
 }
 
+/* ---------- icons ---------- */
+
+.icon-invert {
+  filter: invert(1);
+}
+
+[data-theme="light"] .icon-invert:not(.tv-planet .icon-invert) {
+  filter: none;
+}
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 640px) {
