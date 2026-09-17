@@ -1,6 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ============================================================
+     THEME TOGGLE — dark / light mode
+     ============================================================ */
+  const html   = document.documentElement;
+  const toggle = document.getElementById("theme-toggle");
+
+  // Apply saved preference immediately (before paint)
+  const savedTheme = localStorage.getItem("portfolio-theme");
+  if (savedTheme === "light") html.setAttribute("data-theme", "light");
+
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      const isLight = html.getAttribute("data-theme") === "light";
+      if (isLight) {
+        html.removeAttribute("data-theme");
+        localStorage.setItem("portfolio-theme", "dark");
+      } else {
+        html.setAttribute("data-theme", "light");
+        localStorage.setItem("portfolio-theme", "light");
+      }
+    });
+  }
+
+  /* ============================================================
      0. WORD CYCLE — hero big word rotator
      ============================================================ */
   const wordCycle = document.getElementById("hero-word-cycle");
@@ -173,8 +196,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const PARTICLE_COUNT = 110;
 
   function resize() {
-    canvas.width  = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width  = canvas.parentElement.offsetWidth;
+    canvas.height = canvas.parentElement.offsetHeight;
   }
   resize();
   window.addEventListener("resize", resize);
