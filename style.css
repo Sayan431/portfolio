@@ -2646,7 +2646,7 @@ a {
   .proj-img-wrap {
     width: 45%;
     flex-shrink: 0;
-    aspect-ratio: auto;
+    aspect-ratio: 4 / 3;
   }
 
   .proj-img {
