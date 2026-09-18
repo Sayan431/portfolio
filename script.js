@@ -240,9 +240,10 @@ document.addEventListener("DOMContentLoaded", () => {
     draw() {
       const progress = this.age / this.life;
       const alpha = Math.sin(progress * Math.PI) * 0.75;
+      const isLight = document.documentElement.getAttribute("data-theme") === "light";
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${this.color},${alpha})`;
+      ctx.fillStyle = isLight ? `rgba(0,0,0,${alpha})` : `rgba(${this.color},${alpha})`;
       ctx.fill();
     }
   }
@@ -257,10 +258,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < 90) {
           const alpha = (1 - dist / 90) * 0.15;
+          const isLight = document.documentElement.getAttribute("data-theme") === "light";
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(129,140,248,${alpha})`;
+          ctx.strokeStyle = isLight ? `rgba(0,0,0,${alpha * 1.5})` : `rgba(129,140,248,${alpha})`;
           ctx.lineWidth = 0.6;
           ctx.stroke();
         }
@@ -365,4 +367,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { root: null, rootMargin: "0px", threshold: 0.15 });
 
   document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+
+  /* ============================================================
+     8. TIMELINE SMOOTH SCROLL (Center Alignment)
+     ============================================================ */
+  const timelineLinks = document.querySelectorAll('.pt-item[href^="#project-"]');
+  timelineLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
+        // Optionally update URL without jumping
+        history.pushState(null, null, targetId);
+      }
+    });
+  });
+
 });

@@ -106,10 +106,11 @@
 
 /* "Sayan Chatterjee" — rich indigo-to-violet gradient that shows on light bg */
 [data-theme="light"] .hero-name-highlight {
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
+  background: linear-gradient(135deg, #000000 0%, #7c3aed 50%, #9333ea 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  background-size: 200% auto;
   /* extra padding so descenders aren't clipped */
   padding-bottom: 0.15em;
 }
@@ -1734,6 +1735,9 @@ a {
   background: rgba(255, 255, 255, 0.025);
   backdrop-filter: blur(8px);
   transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .pt-item:hover {
@@ -1811,7 +1815,7 @@ a {
 }
 
 .projects-header {
-  max-width: 1160px;
+  max-width: 960px;
   margin: 0 auto 56px;
 }
 
@@ -1837,18 +1841,11 @@ a {
 }
 
 .projects-grid {
-  max-width: 1160px;
+  max-width: 960px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
-/* last card spans full width on 5 items */
-.projects-grid .proj-card:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  max-width: 516px;
-  margin: 0 auto;
+  grid-template-columns: 1fr;
+  gap: 48px;
 }
 
 .proj-card {
@@ -1913,6 +1910,10 @@ a {
 
 .proj-card[data-color="cyan"] {
   border-top: 2px solid rgba(77, 217, 224, 0.6);
+}
+
+.proj-card[data-color="emerald"] {
+  border-top: 2px solid rgba(16, 185, 129, 0.6);
 }
 
 /* image */
@@ -2633,6 +2634,48 @@ a {
 
 [data-theme="light"] .icon-invert:not(.tv-planet .icon-invert) {
   filter: none;
+}
+
+/* ---------- desktop project horizontal layout ---------- */
+@media (min-width: 641px) {
+  .proj-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .proj-img-wrap {
+    width: 45%;
+    flex-shrink: 0;
+    aspect-ratio: auto;
+  }
+
+  .proj-img {
+    height: 100%;
+  }
+
+  .proj-body {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px 40px;
+  }
+
+  .proj-card[data-color="indigo"] { border-top: 1px solid rgba(255, 255, 255, 0.10); border-left: 2px solid rgba(99, 102, 241, 0.6); }
+  .proj-card[data-color="violet"] { border-top: 1px solid rgba(255, 255, 255, 0.10); border-left: 2px solid rgba(167, 139, 250, 0.6); }
+  .proj-card[data-color="amber"]  { border-top: 1px solid rgba(255, 255, 255, 0.10); border-left: 2px solid rgba(240, 168, 66, 0.6); }
+  .proj-card[data-color="rose"]   { border-top: 1px solid rgba(255, 255, 255, 0.10); border-left: 2px solid rgba(251, 113, 133, 0.6); }
+  .proj-card[data-color="cyan"]   { border-top: 1px solid rgba(255, 255, 255, 0.10); border-left: 2px solid rgba(77, 217, 224, 0.6); }
+  .proj-card[data-color="emerald"]{ border-top: 1px solid rgba(255, 255, 255, 0.10); border-left: 2px solid rgba(16, 185, 129, 0.6); }
+
+  [data-theme="light"] .proj-card[data-color="indigo"],
+  [data-theme="light"] .proj-card[data-color="violet"],
+  [data-theme="light"] .proj-card[data-color="amber"],
+  [data-theme="light"] .proj-card[data-color="rose"],
+  [data-theme="light"] .proj-card[data-color="cyan"],
+  [data-theme="light"] .proj-card[data-color="emerald"] {
+    border-top: 1px solid rgba(15, 23, 42, 0.10);
+  }
 }
 
 /* ---------- responsive ---------- */

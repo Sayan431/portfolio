@@ -232,13 +232,13 @@
               <div class="pt-content">
                 <div class="pt-year">2026</div>
                 <div class="pt-items">
-                  <div class="pt-item">
+                  <a href="#project-devhub" class="pt-item">
                     <span class="pt-dot pt-dot--violet"></span>
                     <div>
                       <span class="pt-item-title">DevHub</span>
                       <span class="pt-item-tag">Unified developer workspace</span>
                     </div>
-                  </div>
+                  </a>
                   <div class="pt-item">
                     <span class="pt-dot pt-dot--violet"></span>
                     <div>
@@ -258,13 +258,13 @@
               </div>
               <div class="pt-content">
                 <div class="pt-items">
-                  <div class="pt-item">
+                  <a href="#project-leadgen" class="pt-item">
                     <span class="pt-dot pt-dot--amber"></span>
                     <div>
                       <span class="pt-item-title">VE Lead Generator</span>
                       <span class="pt-item-tag">B2B lead generation dashboard</span>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -277,27 +277,27 @@
               </div>
               <div class="pt-content">
                 <div class="pt-items">
-                  <div class="pt-item">
+                  <a href="#project-presales" class="pt-item">
                     <span class="pt-dot pt-dot--cyan"></span>
                     <div>
                       <span class="pt-item-title">Presales AI Agent</span>
                       <span class="pt-item-tag">In-house client &amp; developer matching</span>
                     </div>
-                  </div>
-                  <div class="pt-item">
+                  </a>
+                  <a href="#project-kosherstay" class="pt-item">
                     <span class="pt-dot pt-dot--cyan"></span>
                     <div>
                       <span class="pt-item-title">KosherStay</span>
                       <span class="pt-item-tag">Full-stack hotel booking platform</span>
                     </div>
-                  </div>
-                  <div class="pt-item">
+                  </a>
+                  <a href="#project-travel" class="pt-item">
                     <span class="pt-dot pt-dot--cyan"></span>
                     <div>
                       <span class="pt-item-title">Travel Content Agent</span>
                       <span class="pt-item-tag">RSS → AI content → social posting</span>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -309,13 +309,13 @@
               </div>
               <div class="pt-content">
                 <div class="pt-items">
-                  <div class="pt-item">
+                  <a href="#project-zuvo" class="pt-item">
                     <span class="pt-dot pt-dot--rose"></span>
                     <div>
                       <span class="pt-item-title">Zuvo Intelligence</span>
                       <span class="pt-item-tag">Client project · Supply chain + Amazon Ads agent</span>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -334,10 +334,10 @@
 
       <div class="projects-grid">
 
-        <!-- 01 Zuvo Intelligence -->
-        <article class="proj-card reveal delay-100" data-color="indigo">
+        <!-- 01 DevHub -->
+        <article class="proj-card reveal delay-100" data-color="emerald" id="project-devhub">
           <div class="proj-img-wrap">
-            <img src="images/project_zuvo.jpg" alt="Zuvo Intelligence dashboard" class="proj-img" loading="lazy" />
+            <img src="images/project_devhub.jpg" alt="DevHub Developer Workspace" class="proj-img" loading="lazy" />
             <div class="proj-img-overlay"></div>
             <span class="proj-num">01</span>
           </div>
@@ -346,34 +346,30 @@
               <span class="proj-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-bot">
-                  <path d="M12 8V4H8" />
-                  <rect width="16" height="12" x="4" y="8" rx="2" />
-                  <path d="M2 14h2" />
-                  <path d="M20 14h2" />
-                  <path d="M15 13v2" />
-                  <path d="M9 13v2" />
+                  class="lucide lucide-terminal">
+                  <polyline points="4 17 10 11 4 5" />
+                  <line x1="12" y1="19" x2="20" y2="19" />
                 </svg>
               </span>
-              <h3 class="proj-title">Zuvo Intelligence</h3>
+              <h3 class="proj-title">DevHub</h3>
             </div>
-            <p class="proj-tag">supply chain + amazon ads agent</p>
-            <p class="proj-desc">An AI agent covering supply chain intelligence and Amazon Ads management across Vendor
-              and Seller Central, spanning UK, US, and EU marketplaces. Built as Claude Skills — one for inventory
-              forecasting, one for ads management.</p>
+            <p class="proj-tag">unified developer workspace</p>
+            <p class="proj-desc">A centralized hub to streamline the daily developer workflow. Includes a Snippets
+              Manager, Task Tracker, Notes, and a built-in API Tester etc. Decoupled architecture with React frontend
+              and FastAPI backend.</p>
             <ul class="proj-stack">
-              <li>Claude Skills</li>
-              <li>Amazon Ads API</li>
-              <li>Forecasting</li>
+              <li>React / Vite</li>
+              <li>FastAPI</li>
+              <li>Python</li>
             </ul>
-            <a class="proj-link" href="https://ronny-front-end.vercel.app/" target="_blank" rel="noopener">
+            <a class="proj-link" href="https://developer-app-rho.vercel.app/" target="_blank" rel="noopener">
               View deployment <span class="proj-arrow">↗</span>
             </a>
           </div>
         </article>
 
         <!-- 02 VE Lead Generator -->
-        <article class="proj-card reveal delay-200" data-color="violet">
+        <article class="proj-card reveal delay-100" data-color="violet" id="project-leadgen">
           <div class="proj-img-wrap">
             <img src="images/project_leadgen.jpg" alt="VE Lead Generator dashboard" class="proj-img" loading="lazy" />
             <div class="proj-img-overlay"></div>
@@ -413,7 +409,7 @@
         </article>
 
         <!-- 03 Presales AI Agent -->
-        <article class="proj-card reveal delay-300" data-color="amber">
+        <article class="proj-card reveal delay-100" data-color="amber" id="project-presales">
           <div class="proj-img-wrap">
             <img src="images/project_presales.jpg" alt="Presales AI Agent UI" class="proj-img" loading="lazy" />
             <div class="proj-img-overlay"></div>
@@ -446,47 +442,13 @@
           </div>
         </article>
 
-        <!-- 04 DevHub -->
-        <article class="proj-card reveal delay-100" data-color="emerald">
-          <div class="proj-img-wrap">
-            <img src="images/project_devhub.jpg" alt="DevHub Developer Workspace" class="proj-img" loading="lazy" />
-            <div class="proj-img-overlay"></div>
-            <span class="proj-num">04</span>
-          </div>
-          <div class="proj-body">
-            <div class="proj-top">
-              <span class="proj-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-terminal">
-                  <polyline points="4 17 10 11 4 5" />
-                  <line x1="12" y1="19" x2="20" y2="19" />
-                </svg>
-              </span>
-              <h3 class="proj-title">DevHub</h3>
-            </div>
-            <p class="proj-tag">unified developer workspace</p>
-            <p class="proj-desc">A centralized hub to streamline the daily developer workflow. Includes a Snippets
-              Manager, Task Tracker, Notes, and a built-in API Tester etc. Decoupled architecture with React frontend
-              and FastAPI backend.</p>
-            <ul class="proj-stack">
-              <li>React / Vite</li>
-              <li>FastAPI</li>
-              <li>Python</li>
-            </ul>
-            <a class="proj-link" href="https://developer-app-rho.vercel.app/" target="_blank" rel="noopener">
-              View deployment <span class="proj-arrow">↗</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- 05 KosherStay -->
-        <article class="proj-card reveal delay-200" data-color="rose">
+        <!-- 04 KosherStay -->
+        <article class="proj-card reveal delay-100" data-color="rose" id="project-kosherstay">
           <div class="proj-img-wrap">
             <img src="images/project_kosherstay.jpg" alt="KosherStay booking platform" class="proj-img"
               loading="lazy" />
             <div class="proj-img-overlay"></div>
-            <span class="proj-num">05</span>
+            <span class="proj-num">04</span>
           </div>
           <div class="proj-body">
             <div class="proj-top">
@@ -521,13 +483,13 @@
           </div>
         </article>
 
-        <!-- 06 Travel Content Automation -->
-        <article class="proj-card reveal delay-300" data-color="cyan">
+        <!-- 05 Travel Content Automation -->
+        <article class="proj-card reveal delay-100" data-color="cyan" id="project-travel">
           <div class="proj-img-wrap">
             <img src="images/project_travel.jpg" alt="Travel Content Automation pipeline" class="proj-img"
               loading="lazy" />
             <div class="proj-img-overlay"></div>
-            <span class="proj-num">06</span>
+            <span class="proj-num">05</span>
           </div>
           <div class="proj-body">
             <div class="proj-top">
@@ -553,6 +515,44 @@
             </ul>
             <a class="proj-link" href="https://travel-content-automation-agent-1.onrender.com/" target="_blank"
               rel="noopener">
+              View deployment <span class="proj-arrow">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 06 Zuvo Intelligence -->
+        <article class="proj-card reveal delay-100" data-color="indigo" id="project-zuvo">
+          <div class="proj-img-wrap">
+            <img src="images/project_zuvo.jpg" alt="Zuvo Intelligence dashboard" class="proj-img" loading="lazy" />
+            <div class="proj-img-overlay"></div>
+            <span class="proj-num">06</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <span class="proj-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-bot">
+                  <path d="M12 8V4H8" />
+                  <rect width="16" height="12" x="4" y="8" rx="2" />
+                  <path d="M2 14h2" />
+                  <path d="M20 14h2" />
+                  <path d="M15 13v2" />
+                  <path d="M9 13v2" />
+                </svg>
+              </span>
+              <h3 class="proj-title">Zuvo Intelligence</h3>
+            </div>
+            <p class="proj-tag">supply chain + amazon ads agent</p>
+            <p class="proj-desc">An AI agent covering supply chain intelligence and Amazon Ads management across Vendor
+              and Seller Central, spanning UK, US, and EU marketplaces. Built as Claude Skills — one for inventory
+              forecasting, one for ads management.</p>
+            <ul class="proj-stack">
+              <li>Claude Skills</li>
+              <li>Amazon Ads API</li>
+              <li>Forecasting</li>
+            </ul>
+            <a class="proj-link" href="https://ronny-front-end.vercel.app/" target="_blank" rel="noopener">
               View deployment <span class="proj-arrow">↗</span>
             </a>
           </div>
