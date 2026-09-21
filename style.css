@@ -631,6 +631,9 @@ a {
   padding: clamp(48px, 7vw, 80px) var(--edge) clamp(40px, 6vw, 64px);
   border-bottom: 1px solid var(--border);
   overflow: hidden;
+  min-height: calc(100vh - 74px);
+  display: flex;
+  align-items: center;
 }
 
 .hero::before {
@@ -660,6 +663,7 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
+  width: 100%;
 }
 
 /* ---------- hero layout ---------- */
